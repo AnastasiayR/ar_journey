@@ -15,4 +15,4 @@ This is my small contribution to one of my passions: video games. We have a reac
 ### shift_list.py
 This is another well-known but still exciting task: rotate ~~an array~~ a list by given amount of steps.
 ### tic_tac_toe.py
-I hope this is self-explanatory: this is just my mplementation of a well-known tic-tac-toe game.
+I hope this is self-explanatory: this is just my implementation of a well-known tic-tac-toe game.
