@@ -1,7 +1,7 @@
 # General
 
-Helly everyone!
-My name is Anastasiia and I begin my journey to software development world. I've chose Python as my first programming language due to its widespread and frientliness. I'm already very excited and eager to gain a new knowledge about both python and software development in general. This is my first ever repository ever and I hope for your understanding and help with your reasonable and constructive critics. All your advices are much appreciated!
+Hello everyone!
+My name is Anastasiia and I begin my journey to software development world. I've chosen Python as my first programming language due to its widespread and frientliness. I'm already very excited and eager to gain a new knowledge about both python and software development in general. This is my first ever repository ever and I hope for your understanding and help with your reasonable and constructive critics. All your advices are much appreciated!
 
 # Description
 
