@@ -111,30 +111,40 @@ class Game:
                 print('Компьютер пассует')
                 comp.game = False
         else:
-            print('_______')
+            print('\nХод компьютера...')
+            print('Компьютер пассует')
             comp.game = False
+
 
     def result_of_party(self):
         print('Результаты партии:')
-        winner = [0, 0]
+        standings = []
         for i_pl in self.players:
             print(i_pl.name, 'количество очков', i_pl.point)
-            if i_pl.point == winner[0]:
-                print('Ничья')
-                winner[1] = 0
-            if i_pl.point <= 21 and i_pl.point > winner[0]:
-                winner = [i_pl.point, i_pl.name]
-        print('Победитель:', winner[1], winner[0], 'очков')
-        self.total_result(winner[1])
+            if i_pl.point>21:
+                i_pl.point = 0
+            standings.append([i_pl.point, i_pl.name])
+        if all([res[0]==0 for res in standings]):
+            winner = 0
+            print('У всех участников перебор. Ничья')
+        elif all([standings[res][0] == standings[(res+1)][0] for res in range(len(standings)-1)]):
+            print('Ничья')
+            winner = 0
+        else:
+            winner_count = max([res[0] for res in standings])
+            winner = [i_pl.name for i_pl in self.players if i_pl.point == winner_count][0]
+            print('Победитель:', winner, winner_count, 'очков')
+
+        self.total_result(winner)
         self.end_of_game()
 
     def total_result(self, name_win):
         for i_pl in self.players:
             if i_pl.name == name_win:
                 i_pl.total_point[0] += 1
-            if name_win == 0:
+            elif name_win == 0:
                 i_pl.total_point[2] += 1
-            if i_pl.name != name_win:
+            elif i_pl.name != name_win:
                 i_pl.total_point[1] += 1
 
 
